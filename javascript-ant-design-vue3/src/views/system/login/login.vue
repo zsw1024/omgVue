@@ -12,8 +12,8 @@
   <div class="login-container">
     <div class="box-item desc">
       <div class="welcome">
-        <p>欢迎登录 SmartAdmin V2</p>
-        <p class="desc">
+        <p>欢迎使用AIMOS系统 &#45;&#45;v1.01</p>
+        <!--<p class="desc">
           SmartAdmin 是由 河南·洛阳
           <a target="_blank" href="https://www.1024lab.net" style="color: white; weight: bolder; font-size: 15px; text-decoration: underline"
             >1024创新实验室（1024Lab）</a
@@ -34,25 +34,29 @@
               </a>
             </span>
           </span>
-        </p>
+        </p>-->
       </div>
       <div class="app-qr-box">
-        <div class="app-qr">
+        <!--<div class="app-qr">
           <img :src="zhuoda" />
           <span class="qr-desc"> 加微信，骚扰卓大 :) </span>
         </div>
         <div class="app-qr">
           <img :src="xiaozhen" />
           <marquee  class="qr-desc" scrolldelay="130"> 关注：小镇程序员，了解二三线城市程序员的代码与“钱途”，技术与生活，城市可能无法选择，但未来可以拼搏。</marquee>
+        </div>-->
+        <div class="app-qr">
+          <img :src="omg3" />
+          <span class="qr-desc2"> Copyright @2022 深圳市欧米高软件技术有限公司 </span>
         </div>
       </div>
     </div>
     <div class="box-item login">
-      <img class="login-qr" :src="loginQR" />
+     <!-- <img class="login-qr" :src="loginQR" />-->
       <div class="login-title">账号登录</div>
       <a-form ref="formRef" class="login-form" :model="loginForm" :rules="rules">
         <a-form-item name="loginName">
-          <a-input v-model:value.trim="loginForm.loginName" placeholder="请输入用户名" />
+          <a-input class="loginInput" v-model:value.trim="loginForm.loginName" placeholder="请输入用户名" />
         </a-form-item>
         <a-form-item name="password">
           <a-input-password
@@ -62,19 +66,18 @@
             placeholder="请输入密码"
           />
         </a-form-item>
-        <a-form-item name="captchaCode">
+        <!--<a-form-item name="captchaCode">
           <a-input class="captcha-input" v-model:value.trim="loginForm.captchaCode" placeholder="请输入验证码" />
           <img class="captcha-img" :src="captchaBase64Image" @click="getCaptcha" />
-        </a-form-item>
+        </a-form-item>-->
         <a-form-item>
           <a-checkbox v-model:checked="rememberPwd">记住密码</a-checkbox>
-          <span> ( 账号：admin   密码：123456 )</span>
         </a-form-item>
         <a-form-item>
           <div class="btn" @click="onLogin">登录</div>
         </a-form-item>
       </a-form>
-      <div class="more">
+      <!--<div class="more">
         <div class="title-box">
           <p class="line"></p>
           <p class="title">其他方式登录</p>
@@ -86,7 +89,7 @@
           <img :src="googleLogin" />
           <img :src="weiboLogin" />
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 </template>
@@ -105,6 +108,8 @@
   import loginQR from '/@/assets/images/login/login-qr.png';
   import xiaozhen from '/@/assets/images/1024lab/xiaozhen-gzh.jpg';
 
+  import omg1 from '/@/assets/images/logo/logo-omg-qj.png';
+  import omg3 from '/@/assets/images/logo/logo-omg-xbj.png';
   import aliLogin from '/@/assets/images/login/ali-icon.png';
   import googleLogin from '/@/assets/images/login/google-icon.png';
   import qqLogin from '/@/assets/images/login/qq-icon.png';

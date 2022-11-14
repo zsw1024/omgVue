@@ -1,5 +1,5 @@
 {
-  "name":"SmartAdmin",
+  "name": "SmartAdmin",
   "version": "2.0.0",
   "author": {
     "name": "1024创新实验室（1024lab）",
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "~2.3.3",
     "@vue/compiler-sfc": "~3.2.26",
-    "eslint": "^8.16.0",
+    "eslint": "8.22.0",
     "eslint-config-prettier": "~8.5.0",
     "eslint-plugin-prettier": "~4.0.0",
     "eslint-plugin-vue": "~9.1.0",
