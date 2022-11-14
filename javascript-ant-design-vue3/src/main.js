@@ -27,6 +27,11 @@ import { useUserStore } from '/@/store/modules/system/user';
 import '/@/theme/index.less';
 import { getTokenFromCookie } from '/@/utils/cookie-util';
 
+// main.ts
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
+
 
 /*
  * -------------------- ※ 着重 解释说明下main.js的初始化逻辑 begin ※ --------------------
@@ -63,7 +68,7 @@ async function getLoginInfo() {
 
 function initVue() {
   let vueApp = createApp(App);
-  let app = vueApp.use(router).use(store).use(i18n).use(Antd).use(smartEnumPlugin, constantsInfo).use(privilegePlugin).use(JsonViewer);
+  let app = vueApp.use(router).use(store).use(i18n).use(Antd).use(smartEnumPlugin, constantsInfo).use(privilegePlugin).use(JsonViewer).use(ElementPlus, { size: 'small', zIndex: 3000 });
   //注入权限
   app.directive('privilege', {
     mounted(el, binding) {

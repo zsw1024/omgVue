@@ -46,25 +46,51 @@
           <marquee  class="qr-desc" scrolldelay="130"> 关注：小镇程序员，了解二三线城市程序员的代码与“钱途”，技术与生活，城市可能无法选择，但未来可以拼搏。</marquee>
         </div>-->
         <div class="app-qr">
-          <img :src="omg3" />
+          <img :src="omg3">
           <span class="qr-desc2"> Copyright @2022 深圳市欧米高软件技术有限公司 </span>
         </div>
       </div>
     </div>
     <div class="box-item login">
      <!-- <img class="login-qr" :src="loginQR" />-->
-      <div class="login-title">账号登录</div>
+      <div class="login-title"></div>
+      <div class="logoImg">
+        <label>登录</label>
+        <a-divider type="vertical"  style="height: 22px; font-weight: normal; border-color: #7cb305"  />
+        <img :src="omg1">
+      </div>
+
       <a-form ref="formRef" class="login-form" :model="loginForm" :rules="rules">
+        <a-form-item name="areaName">
+            <a-select v-model:value.trim="loginForm.areaName" placeholder="请输入区域名称" class="loginInput">
+              <a-select-option value="深圳">深圳</a-select-option>
+              <a-select-option value="惠州">惠州</a-select-option>
+            </a-select>
+
+        </a-form-item>
         <a-form-item name="loginName">
-          <a-input class="loginInput" v-model:value.trim="loginForm.loginName" placeholder="请输入用户名" />
+          <a-input class="loginInput" v-model:value.trim="loginForm.loginName" placeholder="请输入用户名" >
+            <template #prefix>
+              <a-tooltip title="用户名">
+                <user-outlined type="user" :style="{ color: 'rgba(10,1,1,0.74)' }" />
+              </a-tooltip>
+            </template>
+          </a-input>
         </a-form-item>
         <a-form-item name="password">
-          <a-input-password
+          <a-input-password class="loginInput"
             v-model:value="loginForm.password"
             autocomplete="on"
             :type="showPassword ? 'text' : 'password'"
             placeholder="请输入密码"
-          />
+          >
+            <template #prefix>
+              <a-tooltip title="密码">
+                <lock-filled type="pwd" :style="{ color: 'rgba(10,1,1,0.53)' }" />
+              </a-tooltip>
+            </template>
+          </a-input-password>
+
         </a-form-item>
         <!--<a-form-item name="captchaCode">
           <a-input class="captcha-input" v-model:value.trim="loginForm.captchaCode" placeholder="请输入验证码" />
@@ -108,7 +134,7 @@
   import loginQR from '/@/assets/images/login/login-qr.png';
   import xiaozhen from '/@/assets/images/1024lab/xiaozhen-gzh.jpg';
 
-  import omg1 from '/@/assets/images/logo/logo-omg-qj.png';
+  import omg1 from '/@/assets/images/logo/logo-omg-qj2.png';
   import omg3 from '/@/assets/images/logo/logo-omg-xbj.png';
   import aliLogin from '/@/assets/images/login/ali-icon.png';
   import googleLogin from '/@/assets/images/login/google-icon.png';
@@ -120,7 +146,10 @@
 
   //--------------------- 登录表单 ---------------------------------
 
+
+
   const loginForm = reactive({
+    areaName: '深圳',
     loginName: '',
     password: '',
     captchaCode: '',
@@ -128,6 +157,7 @@
     loginDevice: LOGIN_DEVICE_ENUM.PC.value,
   });
   const rules = {
+    areaName: [{ required: true, message: '区域名称不能为空' }],
     loginName: [{ required: true, message: '用户名不能为空' }],
     password: [{ required: true, message: '密码不能为空' }],
     captchaCode: [{ required: true, message: '验证码不能为空' }],

@@ -16,7 +16,7 @@ import PkgConfig from 'vite-plugin-package-config';
 const pathResolve = (dir) => {
   return resolve(__dirname, '.', dir);
 };
-export default {
+export default{
   base: process.env.NODE_ENV === 'production' ? '/' : '/',
   root: process.cwd(),
   resolve: {
@@ -68,6 +68,9 @@ export default {
           }
         },
       },
+      external: [
+        "element-plus",
+      ],
     },
     target: 'modules',
     outDir: 'dist', // 指定输出路径
