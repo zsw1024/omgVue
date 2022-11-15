@@ -12,7 +12,8 @@
   <div class="login-container">
     <div class="box-item desc">
       <div class="welcome">
-        <p>欢迎使用AIMOS系统 &#45;&#45;v1.01</p>
+        <!--<p>欢迎使用AIMOS系统 &#45;&#45;v1.01</p>-->
+        <p>智能制造运营系统</p>
         <!--<p class="desc">
           SmartAdmin 是由 河南·洛阳
           <a target="_blank" href="https://www.1024lab.net" style="color: white; weight: bolder; font-size: 15px; text-decoration: underline"
@@ -55,9 +56,10 @@
      <!-- <img class="login-qr" :src="loginQR" />-->
       <div class="login-title"></div>
       <div class="logoImg">
-        <label>登录</label>
+        <label class="logoImg1">登录</label>
         <a-divider type="vertical"  style="height: 22px; font-weight: normal; border-color: #7cb305"  />
-        <img :src="omg1">
+        <label class="logoImg2">AIMOS</label>
+        <!--<img :src="omg1">-->
       </div>
 
       <a-form ref="formRef" class="login-form" :model="loginForm" :rules="rules">
@@ -134,7 +136,7 @@
   import loginQR from '/@/assets/images/login/login-qr.png';
   import xiaozhen from '/@/assets/images/1024lab/xiaozhen-gzh.jpg';
 
-  import omg1 from '/@/assets/images/logo/logo-omg-qj2.png';
+  import omg1 from '/@/assets/images/logo/logo-omg-qj4.png';
   import omg3 from '/@/assets/images/logo/logo-omg-xbj.png';
   import aliLogin from '/@/assets/images/login/ali-icon.png';
   import googleLogin from '/@/assets/images/login/google-icon.png';

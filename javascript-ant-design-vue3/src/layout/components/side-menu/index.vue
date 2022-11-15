@@ -12,9 +12,9 @@
 
   <!-- 1、顶部logo区域 -->
   <div class="logo" @click="onGoHome" :style="sideMenuWidth" v-if="!collapsed">
-    <img class="logo-img" :src="logoImg" />
-    <div class="title title-light" v-if="sideMenuTheme === 'light'">{{websiteName}}</div>
-    <div class="title title-dark" v-if="sideMenuTheme === 'dark'">{{websiteName}}</div>
+    <img class="logo-img2" :src="logoImg2" />
+    <!--<div class="title title-light" v-if="sideMenuTheme === 'light'">{{websiteName}}</div>
+    <div class="title title-dark" v-if="sideMenuTheme === 'dark'">{{websiteName}}</div>-->
   </div>
   <div class="min-logo" @click="onGoHome" v-if="collapsed">
     <img class="logo-img" :src="logoImg" />
@@ -28,7 +28,9 @@
   import { computed, ref, watch } from 'vue';
   import { useRouter } from 'vue-router';
   import RecursionMenu from './recursion-menu.vue';
-  import logoImg from '/@/assets/images/logo/smart-admin-logo.png';
+ // import logoImg from '/@/assets/images/logo/smart-admin-logo.png';
+  import logoImg from '/@/assets/images/logo/logo-omg-qj.png';
+  import logoImg2 from '/@/assets/images/logo/logo-omg.png';
   import { HOME_PAGE_NAME } from '/@/constants/system/home-const';
   import { useAppConfigStore } from '/@/store/modules/system/app-config';
 
@@ -74,14 +76,14 @@
     .min-logo {
       height: @header-user-height;
       line-height: @header-user-height;
-      padding: 0px 15px 0px 15px;
+      padding: 15px 15px 0px 15px;
       width: 100%;
       z-index: 9999;
       display: flex;
       justify-content: center;
       .logo-img {
-        width: 32px;
-        height: 32px;
+        width: 50px;
+        height: 25px;
       }
     }
 
@@ -97,6 +99,10 @@
       .logo-img {
         width: 40px;
         height: 40px;
+      }
+      .logo-img2 {
+        width: 200px;
+        height: 55px;
       }
 
       .title {
