@@ -9,9 +9,19 @@
   *
 -->
 <template>
-  <default-home-card icon="SmileTwoTone" title="添加微信，关注【小镇程序员】、【1024创新实验室】">
+  <default-home-card icon="SmileTwoTone" title="联系我们">
     <div class="app-qr-box">
-      <div class="app-qr">
+      <div class="app-qr2">
+        <span class="qr-desc2"> 小王：123456789 </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="qr-desc3"> 小王：123456789 </span>
+      </div>
+      <div class="app-qr2">
+        <span class="qr-desc2"> 小王：123456789 </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="qr-desc3"> 小王：123456789 </span>
+      </div>
+      <!--<div class="app-qr">
         <img :src="zhuoda" />
         <span class="qr-desc strong"> 卓大的微信号！ </span>
         <span class="qr-desc"> 骚扰卓大 :) </span>
@@ -25,7 +35,7 @@
         <img :src="lab1024" />
         <span class="qr-desc strong"> 1024创新实验室 </span>
         <span class="qr-desc"> 官方账号 </span>
-      </div>
+      </div>-->
     </div>
   </default-home-card>
 </template>
@@ -37,10 +47,24 @@
 </script>
 <style lang="less" scoped>
   .app-qr-box {
-    display: flex;
-    height: 150px;
-    align-items: center;
+    height: 55px;
+    width: 100%;
     justify-content: space-around;
+    .app-qr2 {
+      .qr-desc2 {
+        width: 60%;
+        font-size: 14px;
+        text-align: left;
+        overflow-x: hidden;
+      }
+      .qr-desc3 {
+        width: 40%;
+        font-size: 14px;
+        text-align: right;
+        overflow-x: hidden;
+      }
+    }
+
     .app-qr {
       display: flex;
       align-items: center;

@@ -21,8 +21,8 @@
         <phone-outlined style="font-size: 23px; line-height: 50px; margin-top: 5px" />
       </div>
       <div class="help-doc-contact-right">
-        <a>联系客服</a>
-        <div class="help-doc-contac-time">9:00-17:00 5x7小时</div>
+        <a>联系系统维护人员</a>
+        <div class="help-doc-contac-time">8:30-18:00 6x8小时</div>
       </div>
     </div>
 

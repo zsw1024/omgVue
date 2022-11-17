@@ -11,7 +11,7 @@
 <template>
   <a-dropdown trigger="click" v-model:visible="show">
     <div @click="fetchMessage">
-      <a-badge count="12">
+      <a-badge count="0">
         <div style="width: 26px; height: 26px">
           <BellOutlined :style="{ fontSize: '18px' }" />
         </div>
@@ -27,40 +27,47 @@
                 <a-list-item>
                   <a-list-item-meta description="7天前">
                     <template #title>
-                      <a href="#">今天洛阳天气39°c，洛阳变各阳...</a>
-                    </template>
-                    <template #avatar>
-                      <a-avatar src="https://zhuoda.vip/images/blog/profile-128-128.jpg" />
+                      <a href="#">通知123</a>
                     </template>
                   </a-list-item-meta>
                 </a-list-item>
                 <a-list-item>
                   <a-list-item-meta description="7天前">
                     <template #title>
-                      <a href="#">六月的雨　就是无情的你...</a>
-                    </template>
-                    <template #avatar>
-                      <a-avatar src="https://zhuoda.vip/images/blog/profile-128-128.jpg" />
+                      <a href="#">通知456</a>
                     </template>
                   </a-list-item-meta>
                 </a-list-item>
                 <a-list-item>
                   <a-list-item-meta description="7天前">
                     <template #title>
-                      <a href="#">今年河南天气炎热，河南变可南...</a>
-                    </template>
-                    <template #avatar>
-                      <a-avatar src="https://zhuoda.vip/images/blog/profile-128-128.jpg" />
+                      <a href="#">通知789</a>
                     </template>
                   </a-list-item-meta>
                 </a-list-item>
               </a-list>
             </a-tab-pane>
             <a-tab-pane tab="消息" key="2">
-              <a-list class="tab-pane" />
+              <a-list class="tab-pane" size="small">
+                <a-list-item>
+                  <a-list-item-meta description="3天前">
+                    <template #title>
+                      <a href="#">消息456</a>
+                    </template>
+                  </a-list-item-meta>
+                </a-list-item>
+              </a-list>
             </a-tab-pane>
             <a-tab-pane tab="待办" key="3">
-              <a-list class="tab-pane" />
+              <a-list class="tab-pane" size="small">
+                <a-list-item>
+                  <a-list-item-meta description="3天前">
+                    <template #title>
+                      <a href="#">待办456</a>
+                    </template>
+                  </a-list-item-meta>
+                </a-list-item>
+              </a-list>
             </a-tab-pane>
           </a-tabs>
         </a-spin>

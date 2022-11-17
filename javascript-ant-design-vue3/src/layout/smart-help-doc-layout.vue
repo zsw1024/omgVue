@@ -69,7 +69,8 @@
   import SmartFooter from './components/smart-footer/index.vue';
   import { helpDocApi } from '/@/api/support/help-doc/help-doc-api';
   import { helpDocCatalogApi } from '/@/api/support/help-doc/help-doc-catalog-api';
-  import logoImg from '/@/assets/images/logo/smart-admin-logo-white.png';
+  //import logoImg from '/@/assets/images/logo/smart-admin-logo-white.png';
+  import logoImg from '/@/assets/images/logo/logo-omg-qj.png';
   import { SmartLoading } from '/@/components/framework/smart-loading';
   import { HOME_PAGE_NAME } from '/@/constants/system/home-const';
   import watermark from '/@/lib/smart-wartermark';
@@ -246,6 +247,7 @@
       margin-bottom: 10px;
 
       .logo-img {
+        margin-top: 5px;
         width: 40px;
         height: @header-user-height;
       }

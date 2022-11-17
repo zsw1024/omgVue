@@ -23,7 +23,7 @@ export const appDefaultConfig = {
   // 页脚
   footerFlag: true,
   // 帮助文档
-  helpDocFlag: true,
+  helpDocFlag: false,
   // 网站名称
-  websiteName: 'SmartAdmin 2.X',
+  websiteName: 'AIMOS',
 };

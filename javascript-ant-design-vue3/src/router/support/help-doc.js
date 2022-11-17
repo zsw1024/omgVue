@@ -15,7 +15,7 @@ export const helpDocRouters = [
     name: 'HelpDoc',
     component: SmartHelpDocLayout,
     meta: {
-      title: '帮助文档',
+      title: '帮助文档1',
       hideInMenu: true,
     },
     children: [

@@ -13,7 +13,7 @@
       <a-input-search
         @click="search"
         style="margin-right: 30px; width: 250px"
-        placeholder="1024创新实验室、小镇程序员"
+        placeholder="Aimos"
         enter-button="搜索"
         size="small"
       />
@@ -69,7 +69,7 @@
 
   //搜索
   function search(){
-    window.open("https://1024lab.net");
+    //window.open("https://www.baidu.com/");
   }
 </script>
 

@@ -9,8 +9,8 @@
 -->
 <template>
   <div class="version" >
-    <a target="_blank" href="https://www.1024lab.net">
-      SmartAdmin V2.x @copyright 河南·洛阳【1024创新实验室】 Since 2012-{{ currentYear }}
+    <a target="_blank"> <!--href="https://www.baidu.com"-->
+      AIMOS V1 @copyright 深圳欧米高 Since 2020-{{ currentYear }}
     </a>
   </div>
 </template>
@@ -22,7 +22,7 @@
 
 <style lang="less" scoped>
   .version {
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(0, 0, 0, 0.45);
     a {
       color: rgba(0, 0, 0, 0.45);
